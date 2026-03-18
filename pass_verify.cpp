@@ -111,6 +111,7 @@ int main()
         }
         case 2:
         {
+            int found=0;
             cin>>user1;
             fstream file1("user.txt",ios::in);
             while(getline(file1,line))
@@ -120,11 +121,27 @@ int main()
                 getline(str,key,',');
                 if(user1.validate(user,key))
                 {
+                    found=1;
                     break;
                 }
             }
+            if(found)
+            {
+                cout<<"Login succesful \n";
+                cout<<"getting into wall's street\n";
+                for(int i=0;i<3;i++)
+                {
+                cout<<"\rtake's few seconds "<<i+1<<flush;
+                this_thread::sleep_for(chrono::seconds(1));
+                } 
+                 return 2;//returning 2 for suceesfully login the user
+            }
+            else
+            {
+                cout<<"user name or password missmatched\n";
+                return 3;//returniing 3 missmatched
+            }
             file1.close();
-            return 2;//returniing 2 for suceesfully addeing the user
         }//closing case2
     }//closing switch
     }//closing while
