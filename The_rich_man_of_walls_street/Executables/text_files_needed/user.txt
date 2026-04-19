@@ -1,0 +1,11 @@
+sriadithyaa,9731,company
+sagoc,987654321,company
+steve_jobs,7614,investor
+Pepsi,5431,company
+samsung,8941,company
+sam,12sam,investor
+metha,7614,investor
+harshath,9894,investor
+mahindra,7614,company
+Apple,9843,company
+
